@@ -1,5 +1,12 @@
-$color: #0086b3;
-h1 {
-  font-size: 1.2em;
-  color: $color;
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container-fluid {
+  position: relative;
+  padding: 0px;
 }

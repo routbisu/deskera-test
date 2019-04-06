@@ -1,0 +1,30 @@
+.chat-heading {
+  color: #323441;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding: 3px;
+}
+
+.profile-section {
+  float: right;
+  position: relative;
+}
+
+.profile-avatar {
+  width: 30px;
+  border-radius: 50%;
+  position: relative;
+  top: -4px;
+}
+
+.logged-user {
+  font-size: 13px;
+  color: #666666;
+  margin-left: 5px;
+  position: relative;
+  top: -15px;
+}

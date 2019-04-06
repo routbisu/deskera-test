@@ -1,0 +1,29 @@
+.left-nav {
+  position: fixed;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  width: 265px;
+  background: #323441;
+}
+
+.left-nav h3 {
+  color: #ededed;
+  font-size: 15px;
+  background: #1e1e1e;
+  margin: 0px;
+  padding: 13px;
+  padding-left: 18px;
+}
+
+ul.friend-list {
+  list-style: none;
+  padding-left: 15px;
+}
+
+ul.friend-list li {
+  color: #bbbbbb;
+  font-size: 13px;
+  padding: 10px 5px;
+  cursor: pointer;
+}
