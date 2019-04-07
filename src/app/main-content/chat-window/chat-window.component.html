@@ -10,40 +10,28 @@
   <div class="chat-body">
     <div class="chat-messages">
       <div class="message-box-header">
-        <img src="https://avatars0.githubusercontent.com/u/18741615?s=460&v=4" alt="Biswa" />
+        <img
+          src="https://avatars0.githubusercontent.com/u/18741615?s=460&v=4"
+          alt="Biswa"
+        />
         <span>Biswaranjan Rout</span>
       </div>
-      <div class="message-text">
-        <img src="https://avatars2.githubusercontent.com/u/20873985?s=460&v=4" alt="Biswa" />
-        <span class="message"><span>12:10 PM</span> Hello world</span>
-      </div>
 
-      <div class="message-text text-right">
-        <img src="https://avatars0.githubusercontent.com/u/18741615?s=460&v=4" alt="Biswa" />
-        <span class="message"><span>12:10 PM</span>Hello world</span>
-      </div>
-
-      <div class="message-text">
-        <img src="https://avatars2.githubusercontent.com/u/20873985?s=460&v=4" alt="Biswa" />
-        <span class="message">Hello world</span>
-      </div>
-      <div class="message-text text-right">
-        <img src="https://avatars0.githubusercontent.com/u/18741615?s=460&v=4" alt="Biswa" />
-        <span class="message">Hello world</span>
-      </div>
-      <div class="message-text">
-        <img src="https://avatars2.githubusercontent.com/u/20873985?s=460&v=4" alt="Biswa" />
-
-        <span class="message">Hello world</span>
-      </div>
-      <div class="message-text text-right">
-        <img src="https://avatars0.githubusercontent.com/u/18741615?s=460&v=4" alt="Biswa" />
-        <span class="message">Hello world</span>
+      <div class="message-text" *ngFor="let message of messages">
+        <img
+          src="https://avatars2.githubusercontent.com/u/20873985?s=460&v=4"
+          alt="Biswa"
+        />
+        <span class="message"><span>12:10 PM</span> {{ message }}</span>
       </div>
     </div>
     <div class="message-box">
-      <input type="text" class="send-message" placeholder="Type your message here" />
-      <div class="btn-enter">
+      <input
+        type="text"
+        class="send-message"
+        placeholder="Type your message here"
+      />
+      <div class="btn-enter" (click)="sendMessage('Hello')">
         <i class="material-icons menu-icon">send</i>
       </div>
     </div>
