@@ -68,7 +68,7 @@
 
 .message-box-header img {
   width: 40px;
-  border-radius: 50%;
+  @include border-radius(50%);
 }
 
 .message-box-header span {
@@ -88,7 +88,7 @@
 
 .message-text img {
   width: 40px;
-  border-radius: 50%;
+  @include border-radius(50%);
 }
 
 .message-text .message {
