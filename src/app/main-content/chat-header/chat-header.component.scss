@@ -1,3 +1,5 @@
+@import '../../../global.scss';
+
 header {
   background: #ededed;
   padding: 10px 15px;
@@ -6,7 +8,7 @@ header {
     display: inline-block;
     text-transform: uppercase;
     font-size: 15px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     letter-spacing: 0.1em;
     padding: 3px;
@@ -26,7 +28,7 @@ header {
     }
     .profile-avatar {
       width: 30px;
-      border-radius: 50%;
+      @include border-radius(50%);
       position: relative;
       top: -4px;
     }
