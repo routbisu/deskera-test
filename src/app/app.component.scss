@@ -1,25 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto);
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-
-// Sass variables
-$font-family-body: "Montserrat", sans-serif;
-$font-family-header: "Roboto", sans-serif;
-$bg-color: #323441;
-
-// Mixins
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
-
-* {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
-}
+@import '../global.scss';
 
 .container-fluid {
   position: relative;
