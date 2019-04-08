@@ -2,7 +2,7 @@
   <div class="modal">
     <div class="modal-header">
       <span class="heading">Update Profile</span>
-      <i class="material-icons menu-icon">close</i>
+      <i class="material-icons menu-icon" (click)="onClose()">close</i>
     </div>
     <div class="modal-body">
       <form action="" class="profile-update-form">
@@ -19,11 +19,7 @@
         </select>
         <label for="">Alpha 2 Code</label>
         <div class="flag-holder">
-          <img
-            src="https://restcountries.eu/data/ind.svg"
-            class="flag-image"
-            alt="India"
-          />
+          <img src="https://restcountries.eu/data/ind.svg" class="flag-image" alt="India" />
           <input type="text" />
         </div>
 

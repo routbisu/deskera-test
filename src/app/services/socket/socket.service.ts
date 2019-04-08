@@ -1,7 +1,7 @@
-import { Injectable } from "@angular/core";
-import * as io from "socket.io-client";
-import { Observable } from "rxjs/Observable";
-import * as Rx from "rxjs/Rx";
+import { Injectable } from '@angular/core';
+import * as io from 'socket.io-client';
+import { Observable } from 'rxjs/Observable';
+import * as Rx from 'rxjs/Rx';
 
 @Injectable()
 export class WebsocketService {
@@ -12,13 +12,13 @@ export class WebsocketService {
 
   connect(): Rx.Subject<MessageEvent> {
     // If you aren't familiar with environment variables then
-    const socketUrl = "http://localhost:5000";
+    const socketUrl = 'http://localhost:5000';
     this.socket = io(socketUrl);
 
     // We define our observable which will observe any incoming messages
     // from our socket.io server.
     let observable = new Observable(observer => {
-      this.socket.on("message", data => {
+      this.socket.on('message', data => {
         observer.next(data);
       });
       return () => {
@@ -31,7 +31,7 @@ export class WebsocketService {
     // socket server whenever the `next()` method is called.
     let observer = {
       next: (data: Object) => {
-        this.socket.emit("message", JSON.stringify(data));
+        this.socket.emit('message', JSON.stringify(data));
       }
     };
 

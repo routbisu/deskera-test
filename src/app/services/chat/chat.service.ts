@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import { WebsocketService } from "../socket/socket.service";
-import { Observable, Subject } from "rxjs/Rx";
+import { Injectable } from '@angular/core';
+import { WebsocketService } from '../socket/socket.service';
+import { Subject } from 'rxjs/Rx';
 
 @Injectable()
 export class ChatService {

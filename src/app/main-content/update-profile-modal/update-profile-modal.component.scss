@@ -1,92 +1,100 @@
-@import "../../../global.scss";
+@import '../../../global';
 
-.modal-overlay {
-  z-index: 500;
-  background: #1e1e1e;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-  display: none;
-}
+:host {
+  .modal-overlay {
+    z-index: 500;
+    background: #1e1e1e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+    display: none;
+  }
 
-.modal {
-  background: #fff;
-  width: 60%;
-  margin: auto;
-  margin-top: 150px;
-  z-index: 1200;
-  box-shadow: 1px 2px 4px #1e1e1e;
-}
+  .modal {
+    background: #fff;
+    width: 60%;
+    margin: auto;
+    margin-top: 150px;
+    z-index: 1200;
+    box-shadow: 1px 2px 4px #1e1e1e;
+  }
 
-.modal-header {
-  border-bottom: 1px solid #eaeaea;
-  padding: 10px 15px;
-  background: #eaeaea;
-  color: #3276b0;
-  font-weight: bold;
-  font-size: 15px;
-
-  i.menu-icon {
-    float: right;
-    font-size: 15px;
-    font-weight: bold;
+  .modal-header {
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 15px;
+    background: #eaeaea;
     color: #3276b0;
+    font-weight: bold;
+    font-size: 15px;
+
+    i.menu-icon {
+      float: right;
+      font-size: 15px;
+      font-weight: bold;
+      color: #3276b0;
+      cursor: pointer;
+    }
+  }
+
+  .modal-body {
+    padding: 15px;
+  }
+
+  .profile-update-form {
+    overflow: hidden;
+  }
+
+  .profile-update-form input,
+  .profile-update-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #eaeaea;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .profile-update-form select option {
+    padding: 10px;
+  }
+
+  .flag-holder {
+    position: relative;
+    input {
+      padding-left: 55px;
+    }
+  }
+
+  .profile-update-form .flag-image {
+    width: 36px;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+  }
+
+  .profile-update-form label {
+    color: #3276b0;
+    font-size: 12px;
+  }
+
+  .profile-update-form .btn-save {
+    border: none;
+    background: #3276b0;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 14px;
+    float: right;
+    outline: none;
     cursor: pointer;
   }
 }
 
-.modal-body {
-  padding: 15px;
-}
-
-.profile-update-form {
-  overflow: hidden;
-}
-
-.profile-update-form input,
-.profile-update-form select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #eaeaea;
-  outline: none;
-  box-sizing: border-box;
-}
-
-.profile-update-form select option {
-  padding: 10px;
-}
-
-.flag-holder {
-  position: relative;
-  input {
-    padding-left: 55px;
+:host.is-open {
+  .modal-overlay {
+    display: block;
   }
-}
-
-.profile-update-form .flag-image {
-  width: 36px;
-  position: absolute;
-  top: 5px;
-  left: 6px;
-}
-
-.profile-update-form label {
-  color: #3276b0;
-  font-size: 12px;
-}
-
-.profile-update-form .btn-save {
-  border: none;
-  background: #3276b0;
-  color: #ffffff;
-  padding: 10px;
-  font-size: 14px;
-  float: right;
-  outline: none;
-  cursor: pointer;
 }

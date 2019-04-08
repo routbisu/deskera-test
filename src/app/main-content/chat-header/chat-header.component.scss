@@ -1,8 +1,9 @@
-@import '../../../global.scss';
+@import '../../../global';
 
 header {
   background: #ededed;
   padding: 10px 15px;
+
   .chat-heading {
     color: #323441;
     display: inline-block;
@@ -12,33 +13,5 @@ header {
     font-weight: bold;
     letter-spacing: 0.1em;
     padding: 3px;
-  }
-
-  .profile-section {
-    float: right;
-    position: relative;
-    cursor: pointer;
-    i {
-      color: #3276b0;
-      font-size: 16px;
-      font-weight: bold;
-      position: relative;
-      top: -11px;
-      margin-left: 2px;
-    }
-    .profile-avatar {
-      width: 30px;
-      @include border-radius(50%);
-      position: relative;
-      top: -4px;
-    }
-
-    .logged-user {
-      font-size: 13px;
-      color: #666666;
-      margin-left: 5px;
-      position: relative;
-      top: -15px;
-    }
   }
 }
