@@ -11,24 +11,23 @@
         <label for="">Last Name</label>
         <input type="text" />
         <label for="">Country</label>
-        <select name="" id="">
-          <option value="">India</option>
-          <option value="">UK</option>
-          <option value="">Latvia</option>
-          <option value="">Bulgaria</option>
+
+        <select (change)="onCountrySelect($event.target.value)">
+          <option *ngFor="let country of countries" [value]="country.alpha3Code">{{ country.name }}</option>
         </select>
+
         <label for="">Alpha 2 Code</label>
         <div class="flag-holder">
-          <img src="https://restcountries.eu/data/ind.svg" class="flag-image" alt="India" />
-          <input type="text" />
+          <img [src]="selectedCountry['flag']" class="flag-image" [alt]="selectedCountry['name']" />
+          <input type="text" [value]="selectedCountry['alpha2Code']" />
         </div>
 
         <label for="">Phone Number</label>
-        <input type="text" />
+        <input type="text" [value]="selectedCountry['callingCodes'][0]" />
         <label for="">Currency</label>
-        <input type="text" />
+        <input type="text" [value]="selectedCountry['currencies'][0]['code']" />
         <label for="">Time Zone</label>
-        <input type="text" />
+        <input type="text" [value]="selectedCountry['timezones'][0]" />
         <button class="btn-save">Save Details</button>
       </form>
     </div>

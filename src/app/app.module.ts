@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { WebsocketService } from './services/socket/socket.service';
 import { ChatService } from './services/chat/chat.service';
@@ -14,7 +15,7 @@ import { UpdateProfileModalComponent } from './main-content/update-profile-modal
 import { UpdateProfileModalService } from './services/update-profile-modal/update-profile-modal.service';
 
 @NgModule({
-  imports: [BrowserModule],
+  imports: [BrowserModule, HttpClientModule],
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,
